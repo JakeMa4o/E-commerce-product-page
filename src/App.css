@@ -1,38 +1,318 @@
-.App {
-  text-align: center;
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-size: 1rem;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+li {
+  list-style: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.container {
+  max-width: 95%;
+  margin: auto;
+}
+
+/* Header */
+.header {
   display: flex;
-  flex-direction: column;
+  padding: 0.3rem .3rem .7rem;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  font-weight: 700;
+  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.menu {
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  margin: .8rem 1rem 0rem;
+}
+
+.hamburger-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid #000;
+  padding: 1rem;
+  width: 60%;
+  z-index: 3;
+}
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.hamburger-links {
+  margin-top: 1rem;
+}
+
+.hamburger-links li {
+  margin: 1rem 0;
+}
+
+.laptop-nav {
+  display: none;
+}
+
+
+
+/* Main */
+
+.horizontal-ruler {
+  display: none;
+}
+
+/* slider */
+.slider {
+  max-height: 18rem;
+  overflow: hidden;
+}
+
+.btn-wrapper {
+  position: absolute;
+  top: 24%;
+  background-color: hsl(0, 0%, 100%);
+  padding: .5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.next {
+  right: 1rem;
+}
+
+.prev {
+  left: 1rem;
+}
+
+/* price */
+.price {
+  display: flex;
+  margin: 1rem 0;
+}
+
+span {
+  display: block;
+  padding: 1rem;
+  padding: 0;
+}
+
+.new-price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-right: 1rem;
+}
+
+.old-price {
+  margin-left: auto;
+  color: hsl(220, 14%, 75%);
+  text-decoration: line-through;
+}
+
+.discount {
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  padding: 0.3rem .5rem;
+  border-radius: .3rem;
+  font-weight: 700;
+}
+
+/* amount */
+.amount {
+  background-color: hsl(223, 64%, 98%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: 700;
+  border-radius: .5rem;
+}
+
+.plus {
+  cursor: pointer;
+}
+
+.minus {
+  cursor: pointer;
+  margin-top: .5rem;
+}
+
+.addCartBtn {
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(26, 100%, 55%);
+  margin: 1rem 0;
+  border-radius: .5rem;
+}
+/* .addCartBtn svg path {
+  fill: "#fff" !important;
+} */
+
+
+/* Cart */
+.cart {
+  color: hsl(219, 9%, 45%);
+  margin-left: auto;
+}
+
+.cart-btn {
+  cursor: pointer;
+}
+
+.cart-overlay {
+  position: absolute;
+  background-color: #fff;
+  top: 8%;
+  left: 2.6%;
+  width: 100%;
+  min-height: 25%;
+  padding: 1rem;
+  z-index: 1;
+  border-radius: .6rem;
+}
+
+.cart-body {
+  padding: 2rem 0 1rem;
+}
+
+.cart-img {
+  border-radius: .3rem;
+}
+
+.cart-header {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.cart-info {
+  height: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  gap: 1rem;
+}
+
+.delete-btn {
+  font-size: 2rem;
+}
+
+.amount-in-cart {
+  position: absolute;
+  top: 0;
+  right: 3rem;
+  background-color: hsl(26, 100%, 55%);
+  padding: 0 .5rem;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.checkout {
+  width: 100%;
+  padding: 1rem;
+  background-color: hsl(26, 100%, 55%);
+  color: #fff;
+  border: none;
+  border-radius: .5rem;
+  font-weight: 700;
+}
+
+.empty-cart {
+  height: 13rem;
+  display: grid;
+  place-items: center;
+}
+
+
+/* Main info */
+
+.main-info {
+  padding: 1rem;
+}
+
+
+.company-name {
+  color: hsl(26, 100%, 55%);;
+}
+
+.brand-name, .description, .price {
+  padding: .5rem 0;
+}
+
+
+/* Laptop 1440 Media Query */
+
+
+@media screen and (min-width: 1440px){
+  /* header */
+  .menu {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .laptop-nav {
+    display: block;
   }
+  .laptop-links {
+    display: flex;
+    margin-left: 1rem;
+  }
+  .laptop-links li {
+    margin: 0 1rem;
+    font-weight: 700;
+    color: hsl(219, 9%, 45%);;
+  }
+  .avatar img {
+    height: 3rem !important;
+    width: 3rem !important;
+  }
+  .header {
+    padding: 2rem;
+  }
+  /* main */
+  .btn-wrapper {
+    display: none;
+    justify-content: center;
+  }
+  .main {
+    display: flex;
+    padding: 5rem 10rem;
+  }
+  .body-wrapper {
+    max-width: 80%;
+    margin: auto;
+  }
+  .header {
+    box-shadow: 0px 2px hsl(223, 64%, 98%);
+  }
+  .slider {
+    overflow: visible;
+  }
+
+  /* add container or wrapper around whole page so ur HR will be cut by padding like in the image */
 }
