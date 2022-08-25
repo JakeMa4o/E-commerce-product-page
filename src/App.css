@@ -95,7 +95,7 @@ img {
 
 .btn-wrapper {
   position: absolute;
-  top: 15%;
+  top: 11.5rem;
   background-color: hsl(0, 0%, 100%);
   padding: .5rem;
   border-radius: 50%;
@@ -191,10 +191,10 @@ span {
 .cart-overlay {
   position: absolute;
   background-color: #fff;
-  top: 5%;
+  top: 4rem;
   left: 2.6%;
   width: 100%;
-  height: 20%;
+  height: 16rem;
   padding: 1rem;
   z-index: 1;
   border-radius: .6rem;
@@ -246,7 +246,7 @@ span {
 }
 
 .empty-cart {
-  height: 13rem;
+  height: 12rem;
   display: grid;
   place-items: center;
 }
