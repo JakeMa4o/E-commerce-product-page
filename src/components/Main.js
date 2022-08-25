@@ -29,14 +29,14 @@ const images = [
 ];
 
 
-function Main({setCartItem, setAmount, amount}) {
+function Main({ setCartItem, setAmount, amount }) {
 
-  function increase () {
+  function increase() {
     setAmount(prevVal => prevVal + 1);
   }
 
-  function decrease () {
-    if(amount === 1) {
+  function decrease() {
+    if (amount === 1) {
       setCartItem({});
       setAmount(0);
       return
@@ -51,7 +51,7 @@ function Main({setCartItem, setAmount, amount}) {
     alt: "product1"
   }
 
-  function addToCart () {
+  function addToCart() {
     if (amount !== 0) {
       setCartItem(item1);
     }
@@ -59,7 +59,7 @@ function Main({setCartItem, setAmount, amount}) {
   }
 
   return (
-      <div className="main body-wrapper">
+    <div className="main body-wrapper">
       <Slider images={images} />
       <div className="main-info container">
         <h3 className="company-name">Sneaker company</h3>
@@ -68,10 +68,12 @@ function Main({setCartItem, setAmount, amount}) {
         <div className="price">
           <span className="new-price">${item1.price}.00</span> <span className="discount">50%</span> <span className="old-price">$250.00</span>
         </div>
-        <div className="amount">
-          <Minus className="minus" onClick={decrease}/>{amount}<Plus className="plus" onClick={increase}/>
+        <div className="amount-btn-container">
+          <div className="amount">
+            <Minus className="minus" onClick={decrease} />{amount}<Plus className="plus" onClick={increase} />
+          </div>
+          <button className="addCartBtn" onClick={addToCart}><CartSvgWhite style={{ marginRight: "1rem" }} />Add to cart</button>
         </div>
-        <button className="addCartBtn" onClick={addToCart}><CartSvgWhite style={{marginRight: "1rem"}} />Add to cart</button>
       </div>
     </div>
   )

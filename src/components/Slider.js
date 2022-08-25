@@ -11,8 +11,6 @@ import thumbnail4 from "../assets/image-product-4-thumbnail.jpg";
 const thumbnails = [thumbnail1, thumbnail2, thumbnail3, thumbnail4];
 
 function Slider({images}) {
-  // laptop functions
-  console.log(images);
 
   // mobile functions
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -35,7 +33,7 @@ function Slider({images}) {
       <div className="section-btns">
         {thumbnails.map(thumbnail => {
           return (
-            <img src={thumbnail} max-width="100%" max-height="100%" alt={thumbnail}/>
+            <img className="thumbnail-img" src={thumbnail} max-width="100%" max-height="100%" alt={thumbnail}/>
           )
         })}
       </div>

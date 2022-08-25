@@ -95,7 +95,7 @@ img {
 
 .btn-wrapper {
   position: absolute;
-  top: 24%;
+  top: 15%;
   background-color: hsl(0, 0%, 100%);
   padding: .5rem;
   border-radius: 50%;
@@ -132,6 +132,7 @@ span {
   margin-left: auto;
   color: hsl(220, 14%, 75%);
   text-decoration: line-through;
+  font-weight: 700;
 }
 
 .discount {
@@ -190,10 +191,10 @@ span {
 .cart-overlay {
   position: absolute;
   background-color: #fff;
-  top: 8%;
+  top: 5%;
   left: 2.6%;
   width: 100%;
-  min-height: 25%;
+  height: 20%;
   padding: 1rem;
   z-index: 1;
   border-radius: .6rem;
@@ -308,11 +309,44 @@ span {
     margin: auto;
   }
   .header {
-    box-shadow: 0px 2px hsl(223, 64%, 98%);
+    box-shadow: 0px 2px hsla(220, 14%, 75%, .4);
   }
   .slider {
     overflow: visible;
   }
-
-  /* add container or wrapper around whole page so ur HR will be cut by padding like in the image */
+  .old-price {
+    min-width: 100%;
+    padding-top: 1rem;
+  }
+  .price {
+    flex-wrap: wrap;
+  }
+  .amount-btn-container {
+    display: flex;
+  }
+  .amount {
+    flex: 1;
+  }
+  .addCartBtn {
+    flex: 2;
+  }
+  .slider {
+    min-height: 30rem;
+    min-width: 40rem;
+  }
+  .slider-img {
+    border-radius: 1rem;
+    width: 72.5% !important;
+  }
+  /* .main-info {
+    padding: 0 10rem;
+  } */
+  .thumbnail-img {
+    border-radius: 1rem;
+    max-width: 7rem !important;
+    margin-right: 2rem;
+  }
+  .section-btns {
+    margin-top: 2rem;
+  }
 }
