@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import product1 from "../assets/image-product-1.jpg";
 import product2 from "../assets/image-product-2.jpg";
 import product3 from "../assets/image-product-3.jpg";
@@ -60,7 +59,7 @@ function Main({ setCartItem, setAmount, amount }) {
 
   return (
     <div className="main body-wrapper">
-      <Slider images={images} />
+      <Slider images={images}/>
       <div className="main-info container">
         <h3 className="company-name">Sneaker company</h3>
         <h1 className="brand-name">Fall Limited Edition Sneakers</h1>

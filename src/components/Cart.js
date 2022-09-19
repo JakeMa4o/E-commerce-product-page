@@ -15,9 +15,11 @@ function Cart({ item, setCartItem, amount, setAmount }) {
       {Object.keys(item).length === 0 ? <div className="empty-cart" style={{fontWeight: "700", color: "hsl(219, 9%, 45%)"}}>Your cart is empty</div> :
         <div className="cart-body">
           <div className="cart-info">
-            <img className="cart-img" src={item.url} alt={item.alt} />
+            <img className="cart-img" src={item.url} alt={item.alt}/>
             <div className="price-description">
+              <div>
               <p>{item.brandName.substring(0, 20)}...</p>
+              </div>
               <p>{item.price}.00 x {amount} <span style={{fontWeight: "700", display: "inline", color: "#000"}}>{item.price * amount}.00</span></p>
             </div>
             <div className="delete-btn">
